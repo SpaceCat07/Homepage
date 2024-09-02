@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginTop="40dp">
+
+        <RelativeLayout
+            android:id="@+id/wrapJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PT PRI PRI HANTAM"/>
+            <ImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_location_on_24"
+                android:layout_below="@id/judul"/>
+            <TextView
+                android:id="@+id/tempat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sleman"
+                android:layout_toEndOf="@id/imgLocation"
+                android:layout_alignTop="@id/imgLocation"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/informasiKatalog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wrapJudul">
+
+            <TextView
+                android:id="@+id/infoPertama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informasi perubahan data katalog"
+                android:layout_centerHorizontal="true"/>
+            <RelativeLayout
+                android:id="@+id/infoKedua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infoPertama"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:id="@+id/infoKeduaSatu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pembaruan terakhir : "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16-06-2022 15:00:01"
+                    android:layout_toRightOf="@+id/infoKeduaSatu"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/infoKetiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infoKedua"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:id="@+id/infoKetigaSatu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pembaruan selanjutnya : "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16-06-2022 15:00:01"
+                    android:layout_toRightOf="@+id/infoKetigaSatu"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/wrapTombol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/informasiKatalog"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/tombolPertama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Katalog Tender"
+                android:drawableTop="@drawable/baseline_manage_search_24"/>
+            <Button
+                android:id="@+id/tombolKedua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tombolPertama"
+                android:layout_alignBaseline="@id/tombolPertama"
+                android:text="Katalog Tender"
+                android:drawableTop="@drawable/baseline_bookmark_added_24"/>
+            <Button
+                android:id="@+id/tombolKetiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Katalog Tender"
+                android:layout_below="@id/tombolPertama"
+                android:drawableTop="@drawable/baseline_assessment_24"/>
+            <Button
+                android:id="@+id/tombolKeempat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Katalog Tender"
+                android:layout_toEndOf="@id/tombolKetiga"
+                android:layout_alignBaseline="@id/tombolKetiga"
+                android:drawableTop="@drawable/baseline_settings_24"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
